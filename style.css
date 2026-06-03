@@ -293,26 +293,24 @@ body {
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   position: relative;
-  padding: 6px 0;
+  padding: 8px 14px;
   white-space: nowrap;
-}
-.nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--orange);
-  transition: width 0.3s ease;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
 }
 .nav a:hover {
-  color: #111111;
+  color: var(--orange);
+  border-color: var(--orange);
+  background: rgba(255, 81, 0, 0.06);
+  box-shadow: 0 0 12px rgba(255, 81, 0, 0.2);
 }
-.nav a:hover::after {
-  width: 100%;
+.nav a.active,
+.nav a.is-active {
+  color: var(--orange) !important;
+  border-color: var(--orange);
+  background: rgba(255, 81, 0, 0.08);
 }
 
 .header-actions {
